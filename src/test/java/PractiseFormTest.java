@@ -10,7 +10,7 @@ public class PractiseFormTest {
 
     @BeforeAll
     static void beforeAll(){
-        Configuration.baseUrl = "https://demoqa.com/automation-practice-form";
+        Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = true;
     }
@@ -19,6 +19,7 @@ public class PractiseFormTest {
 
         open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
+        executeJavaScript("$('#fixedban').remove()");
 
 
         $("#firstName").setValue("Ivanov");
